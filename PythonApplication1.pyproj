@@ -4,13 +4,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>b3fbdc4d-98b3-47f8-ac63-bfb4df91e6fb</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PythonApplication1.py</StartupFile>
+    <StartupFile>py_basic\PythonApplication1.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PythonApplication1</Name>
     <RootNamespace>PythonApplication1</RootNamespace>
+    <InterpreterId>Global|ContinuumAnalytics|Anaconda37-64</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -21,7 +22,42 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="PythonApplication1.py" />
+    <Compile Include="person\main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="person\Person.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="py_basic\add.py" />
+    <Compile Include="py_basic\module1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="py_basic\money.py" />
+    <Compile Include="py_oop\main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="py_basic\PythonApplication1.py" />
+    <Compile Include="py_oop\py_inher.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Test\main.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Test\MyUI.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tf_basic\tf_multi.py" />
+    <Compile Include="tf_basic\tf_test.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|ContinuumAnalytics|Anaconda37-64" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Test\" />
+    <Folder Include="person\" />
+    <Folder Include="tf_basic\" />
+    <Folder Include="py_basic\" />
+    <Folder Include="py_oop\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
